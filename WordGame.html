@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+    <head>
+        <title>WordGame.html</title>
+        <link rel = "stylesheet"
+            type = "text/css"
+            href = "WordGame.css" />
+        <meta charset = "UTF-8" />
+        <script type = "text/javascript">
+            
+                //gather input values and create variables for them
+                function greet(){
+                    var txtBoy1 = document.getElementById("txtBoy");
+                    var userBoy = txtBoy1.value;
+                    var txtGirl = document.getElementById("txtGirl");
+                    var userGirl = txtGirl.value;
+                    var txtGeo = document.getElementById("txtGeo");
+                    var userGeo = txtGeo.value;
+                    var txtVerb = document.getElementById("txtVerb");
+                    var userVerb = txtVerb.value;
+                    var txtContainer = document.getElementById("txtContainer");
+                    var userContainer = txtContainer.value;
+                    var txtLiquid = document.getElementById("txtLiquid");
+                    var userLiquid = txtLiquid.value;
+                    var txtBodyPart = document.getElementById("txtBodyPart");
+                    var userBodyPart = txtBodyPart.value;
+                    var txtVerbIng = document.getElementById("txtVerbIng");
+                    var userVerbIng = txtVerbIng.value;
+                    
+                    //write and print the story
+                    var output = document.getElementById("output");
+                    output.innerHTML = userBoy + " and " + userGirl + " went up the " + userGeo + " to " + userVerb + " a " + userContainer + " of " + userLiquid + ". " + userBoy + " fell down and broke his " + userBodyPart + ", " + userGirl + " came " + userVerbIng + " after.";
+                }
+        </script>
+    </head>
+    <body>
+        <form>
+           <fieldset>
+            
+                <!-- labelling the input variables to format them in css -->
+                <p>
+                    <label for= "txtBoy">Enter name of a boy.</label>
+                    <input type= "text"
+                            id = "txtBoy"/>
+                    <label for= "txtGirl">Enter name of a girl.</label>
+                    <input type= "text"
+                            id = "txtGirl"/>
+                    <label for= "txtGeo">Enter a landscape.</label>
+                    <input type= "text"
+                            id = "txtGeo"/>
+                    <label for= "txtVerb">Enter a verb.</label>
+                    <input type= "text"
+                            id = "txtVerb"/>
+                    <label for= "txtContainer">Enter a cotainer.</label>
+                    <input type= "text"
+                            id = "txtContainer"/>
+                    <label for= "txtLiquid">Enter a liquid.</label>
+                    <input type= "text"
+                            id = "txtLiquid"/>
+                    <label for= "txtBodyPart">Enter a body part.</label>
+                    <input type= "text"
+                            id = "txtBodyPart"/>
+                    <label for= "txtVerbIng">Enter a new ing verb.</label>
+                    <input type= "text"
+                            id = "txtVerbIng"/>
+                </p>
+                
+                <!-- calling the function -->
+                <button type= "button"
+                        onclick= "greet();">
+                    submit
+                </button>
+            </fieldset>
+        </form>
+        <div id= "output"> </div>
+    </body>
+</html>
